@@ -23,11 +23,17 @@
   //   <button>  Place Your Order </button>
   //  </div>
 
-    const date = dayjs().format('MMMM D')
+    const date = dayjs().format('MMMM D');
+    const time = dayjs().format('HH:mm:ss');
 
-    const para = <p> Today is August {date} </p>
+    const div = (
+      <div>
+        <p> Today is August {date} </p>
+        <p> Current time : {time}</p>
+      </div>
+    );
     const container= document.querySelector(".js-container");
-    ReactDOM.createRoot(container).render(para);
+    ReactDOM.createRoot(container).render(div);
     </script>
   </body>
-</html>
+</html>          
